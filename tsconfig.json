@@ -4,7 +4,23 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@pages/*": ["./src/pages/*", "./src/pages"],
+      "@components/*": ["./src/components/*"],
+      "@data": ["./src/data"],
+      "@hooks": ["./src/hooks"],
+      "@redux": ["./src/redux"],
+      "@router": ["./src/router"],
+      "@templates": ["./src/templates"],
+      "@types": ["./src/types"],
+      "@utils": ["./src/utils"]
+    },
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": ["@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -21,5 +37,8 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }
