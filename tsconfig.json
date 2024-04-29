@@ -20,7 +20,6 @@
     },
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "types": ["@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

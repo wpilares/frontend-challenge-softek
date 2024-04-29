@@ -1,0 +1,50 @@
+@import url('https://fonts.cdnfonts.com/css/br-sonoma');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+// Responsive Design
+$xsm: 480px;
+$sm: 600px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xl2: 1536px;
+
+// Fonts
+$br-sonoma: "BR Sonoma", sans-serif;
+$lato: "Lato", sans-serif;
+
+// Colors
+$white: #FFFFFF;
+$zircon: #F8F9FF;
+$black-pearl: #03050F;
+$black-pearl-alt: #0A051E;
+$comet: #5E6488;
+$bright-turquoise: #00F4E2;
+$spring-green: #00FF7F;
+$martinique: #2B304E;
+
+//Text colors
+$main-text: $black-pearl;
+$alternative-text: $zircon;
+$label-text: $comet;
+$check-text: $black-pearl-alt;
+
+
+//Background-colors
+$footer-background: $black-pearl;
+$button-background: $black-pearl;
+$check-background: $black-pearl-alt;
+$main-background: $zircon;
+
+//border-color
+$border-line: 1px solid $martinique;
+$border-input: 1px solid $comet;
+
+
+
+// Font weight
+$weight-font-light: 300;
+$weight-font-regular: 400; // (default)
+$weight-font-medium: 500;
+$weight-font-semi-bold: 600;
+$weight-font-bold: 700;

@@ -1,8 +1,13 @@
 body,
 html,
-div {
+div,p {
   margin: 0;
   padding: 0;
+  font-family: $br-sonoma;
+}
+
+body,html {
+  background-color: $main-background;
 }
 
 ::-webkit-scrollbar {
