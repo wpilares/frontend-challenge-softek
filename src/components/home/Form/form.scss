@@ -1,0 +1,137 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__group {
+    display: flex;
+    position: relative;
+    border: $border-input;
+    border-radius: 8px;
+    height: 56px;
+    padding: 0 16px;
+  }
+
+  &__subgroup {
+    position: relative;
+    padding: 0 16px;
+    border-left: $border-input;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__select {
+    background: transparent;
+    border: none;
+    line-height: 24px;
+    font-size: 16px;
+    padding-right: 44px;
+    margin-right: 16px;
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    padding-top: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    max-width: 100px;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-background-clip: text;
+      transition: background-color 5000s ease-in-out 0s;
+      box-shadow: inset 0 0 20px 20px transparent;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 8px;
+    color: $label-text;
+    font-family: $br-sonoma;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__terms {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__check {
+    font-family: $br-sonoma;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: $check-text;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__checkbox {
+
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    accent-color: $check-background;
+
+    &:checked {
+      background-color: transparent;
+    }
+
+  }
+
+  &__link {
+    font-family: $br-sonoma;
+    font-weight: $weight-font-semi-bold;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-decoration: underline;
+  }
+
+  &__button {
+    background-color: $button-background;
+    padding: 20px 40px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: $white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 195px;
+  }
+}
+
+@media (max-width: $md) {
+  .form {
+    &__button {
+      width: 100%;
+    }
+  }
+
+}

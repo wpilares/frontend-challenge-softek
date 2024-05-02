@@ -1,0 +1,69 @@
+.navbar {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 120px;
+
+  &__logo {
+    width: 73.19px;
+    height: 36px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: $main-text;
+
+      &__buy {
+        font-weight: $weight-font-semi-bold;
+        line-height: 16px;
+        font-size: 12px;
+        letter-spacing: 0.2px;
+      }
+
+      &__icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      &__phone {
+        font-weight: $weight-font-bold;
+        line-height: 20px;
+        font-size: 18px;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .navbar {
+    padding: 12px 24px;
+
+    &__logo {
+      width: 65.05px;
+      height: 32px;
+    }
+
+    &__list {
+      &-item {
+        &__buy {
+          display: none;
+        }
+        &__phone {
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+}

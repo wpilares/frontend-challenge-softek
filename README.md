@@ -1,30 +1,70 @@
-# React + TypeScript + Vite
+# Challenge Frontend de Softek
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es parte de mi desafío frontend para Softek, donde estoy desarrollando una aplicación web utilizando React con Vite como bundler. Hasta ahora, he completado la primera página y parte de la segunda. Estoy utilizando Yarn como administrador de paquetes, Node.js versión 20.12.2, React con TypeScript y Redux para manejar los estados de usuario al interactuar con la API.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la aplicación:
 
-## Expanding the ESLint configuration
+- Node.js = 20.12.2
+- Yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalación
 
-- Configure the top-level `parserOptions` property like this:
+1. Clona este repositorio en tu máquina local.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+   ```bash
+   git clone https://github.com/tu-usuario/challenge-frontend-softek.git
+   ```
+
+2. Navega al directorio del proyecto.
+
+   ```bash
+   cd challenge-frontend-softek
+   ```
+
+3. Instala las dependencias utilizando Yarn.
+   ```bash
+   yarn install
+   ```
+
+## Uso
+
+Una vez que hayas instalado las dependencias, puedes ejecutar la aplicación en tu entorno local utilizando el siguiente comando:
+
+```bash
+yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Esto iniciará un servidor de desarrollo y abrirá automáticamente la aplicación en tu navegador predeterminado.
+
+## Tecnologías Utilizadas
+
+- React
+- TypeScript
+- Vite
+- Redux
+- Sass
+
+## Estructura del Proyecto
+
+- `/src`: Contiene el código fuente de la aplicación.
+- `/public`: Archivos estáticos, como imágenes y favicon.
+- `/redux`: Archivos relacionados con la gestión del estado de la aplicación utilizando Redux.
+- `/components`: Contiene componentes reutilizables de la aplicación.
+- `/helpers`: Contiene funciones de ayuda que pueden ser útiles en varios lugares del proyecto.
+- `/pages`: Contiene componentes de página de la aplicación.
+- `/assets`: Contiene recursos estáticos, como imágenes, fuentes, etc.
+- `/router`: Contiene configuraciones y archivos relacionados con la navegación en la aplicación.
+- `/services`: Contiene funciones para llamar a las APIs y manejar las solicitudes de red.
+- `/types`: Contiene archivos de definición de tipos y interfaces TypeScript.
+
+## Contribuir
+
+¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, no dudes en enviar un pull request. Asegúrate de seguir las pautas de contribución.
+
+## Autor
+
+[Willber Pilares](https://github.com/wpilares)
+
+> **Nota:** En este proyecto, el archivo `.env` se ha dejado visible en el repositorio para facilitar su uso. Sin embargo, en proyectos reales, es una práctica común agregar el archivo `.env` al archivo `.gitignore` para evitar subir información sensible al repositorio público.

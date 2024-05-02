@@ -1,0 +1,47 @@
+.text {
+  position: relative;
+
+  // colors
+  &.black {
+    color: $main-text;
+  }
+
+  &.white {
+    color: $alternative-text;
+  }
+
+  &.blue {
+    color: $content-text;
+  }
+
+  // font-family
+  &.sonoma {
+    font-family: $br-sonoma;
+  }
+
+  &.lato {
+    font-family: $lato;
+  }
+
+  // weight
+  &.light {
+    font-weight: $weight-font-light;
+  }
+
+  &.regular {
+    font-weight: $weight-font-regular;
+  }
+
+  &.medium {
+    font-weight: $weight-font-medium;
+  }
+
+  &.semi-bold {
+    font-weight: $weight-font-semi-bold;
+  }
+
+  &.bold {
+    font-weight: $weight-font-bold;
+  }
+
+}
