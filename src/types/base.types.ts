@@ -10,7 +10,7 @@ export interface IOnClick {
   onClick?: () => void;
 }
 
-export type ColorType = 'black' | 'white';
+export type ColorType = 'black' | 'white' | 'blue';
 
 export type FontFamilyType = 'sonoma' | 'lato';
 

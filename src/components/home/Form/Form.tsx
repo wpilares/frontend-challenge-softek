@@ -5,11 +5,13 @@ import { changeForm } from '@src/redux/states';
 import { type AppStore } from '@src/redux/Store.ts';
 import { getUser } from '@src/services/user.service.ts';
 import { getAge } from '@src/helpers';
+import { useNavigate } from 'react-router-dom';
 
 export const Form = (): ReactElement => {
   const formData = useSelector((store: AppStore) => store.form);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
@@ -25,15 +27,21 @@ export const Form = (): ReactElement => {
     event: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     event.preventDefault();
-    const user = await getUser();
-    dispatch(
-      changeForm({
-        ...formData,
-        name: user.name,
-        lastName: user.lastName,
-        birthDay: getAge(user.birthDay),
-      }),
-    );
+
+    try {
+      const user = await getUser();
+      dispatch(
+        changeForm({
+          ...formData,
+          name: user.name,
+          lastName: user.lastName,
+          birthDay: getAge(user.birthDay),
+        }),
+      );
+      navigate('/plans');
+    } catch (error) {
+      console.error('User not found');
+    }
   };
 
   return (
@@ -99,6 +107,7 @@ export const Form = (): ReactElement => {
         </label>
         <p className="form__link">Aplican Términos y Condiciones</p>
       </div>
+
       <button type="submit" className="form__button">
         Cotiza aquí
       </button>

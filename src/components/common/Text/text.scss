@@ -10,6 +10,10 @@
     color: $alternative-text;
   }
 
+  &.blue {
+    color: $content-text;
+  }
+
   // font-family
   &.sonoma {
     font-family: $br-sonoma;
