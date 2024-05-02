@@ -1,37 +1,26 @@
-import {
-  type ChangeEvent,
-  type FormEvent,
-  type ReactElement,
-  useState,
-} from 'react';
+import { type ChangeEvent, type FormEvent, type ReactElement } from 'react';
 import './form.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeForm } from '@src/redux/states';
+import { type AppStore } from '@src/redux/Store.ts';
 
 export const Form = (): ReactElement => {
-  const [formData, setFormData] = useState({
-    documentType: 'DNI',
-    dni: '',
-    phone: '',
-  });
+  const formData = useSelector((store: AppStore) => store.form);
+
+  const dispatch = useDispatch();
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    dispatch(changeForm({ ...formData, [name]: value }));
   };
 
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>): void => {
     const { value } = event.target;
-    setFormData({
-      ...formData,
-      documentType: value,
-    });
+    dispatch(changeForm({ ...formData, documentType: value }));
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    console.log(formData);
   };
 
   return (

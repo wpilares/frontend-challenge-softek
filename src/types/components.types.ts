@@ -14,3 +14,9 @@ export interface TextProps extends IClassName {
   family?: FontFamilyType;
   weight?: WeightType;
 }
+
+export interface FormProps {
+  dni: string;
+  documentType: string;
+  phone: string;
+}

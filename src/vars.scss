@@ -22,13 +22,13 @@ $comet: #5E6488;
 $bright-turquoise: #00F4E2;
 $spring-green: #00FF7F;
 $martinique: #2B304E;
+$gray-light: #CCD1EE;
 
 //Text colors
 $main-text: $black-pearl;
 $alternative-text: $zircon;
 $label-text: $comet;
 $check-text: $black-pearl-alt;
-
 
 //Background-colors
 $footer-background: $black-pearl;
@@ -39,8 +39,7 @@ $main-background: $zircon;
 //border-color
 $border-line: 1px solid $martinique;
 $border-input: 1px solid $comet;
-
-
+$border-separator: 1px solid $gray-light;
 
 // Font weight
 $weight-font-light: 300;
