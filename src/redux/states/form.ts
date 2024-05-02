@@ -5,6 +5,9 @@ const initialState: FormProps = {
   dni: '',
   documentType: 'DNI',
   phone: '',
+  name: '',
+  lastName: '',
+  birthDay: '',
 };
 
 export const formSlice = createSlice({

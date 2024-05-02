@@ -3,6 +3,8 @@ import './form.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeForm } from '@src/redux/states';
 import { type AppStore } from '@src/redux/Store.ts';
+import { getUser } from '@src/services/user.service.ts';
+import { getAge } from '@src/helpers';
 
 export const Form = (): ReactElement => {
   const formData = useSelector((store: AppStore) => store.form);
@@ -19,8 +21,19 @@ export const Form = (): ReactElement => {
     dispatch(changeForm({ ...formData, documentType: value }));
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (
+    event: FormEvent<HTMLFormElement>,
+  ): Promise<void> => {
     event.preventDefault();
+    const user = await getUser();
+    dispatch(
+      changeForm({
+        ...formData,
+        name: user.name,
+        lastName: user.lastName,
+        birthDay: getAge(user.birthDay),
+      }),
+    );
   };
 
   return (

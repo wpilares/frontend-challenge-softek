@@ -19,4 +19,7 @@ export interface FormProps {
   dni: string;
   documentType: string;
   phone: string;
+  name: string;
+  lastName: string;
+  birthDay: string;
 }
