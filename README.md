@@ -66,3 +66,5 @@ Esto iniciará un servidor de desarrollo y abrirá automáticamente la aplicaci�
 ## Autor
 
 [Willber Pilares](https://github.com/wpilares)
+
+> **Nota:** En este proyecto, el archivo `.env` se ha dejado visible en el repositorio para facilitar su uso. Sin embargo, en proyectos reales, es una práctica común agregar el archivo `.env` al archivo `.gitignore` para evitar subir información sensible al repositorio público.
